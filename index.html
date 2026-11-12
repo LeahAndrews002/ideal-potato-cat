@@ -1,98 +1,995 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Importance of Fruits and Vegetables</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f8f4;
-      color: #333;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080c18">
+<meta name="description" content="Discover Supergirl (2026), starring Milly Alcock. Explore the story, cast, official trailer and movie details.">
+<title>SUPERGIRL (2026) | Official Movie Experience</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #080c18;
+    --panel: #10182a;
+    --blue: #1688ff;
+    --red: #ed263d;
+    --gold: #ffcb45;
+    --white: #ffffff;
+    --muted: #a6b0c3;
+    --line: rgba(255,255,255,.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #cbd3e1;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    padding: 11px 19px;
+    border: 1px solid rgba(255,255,255,.35);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.nav-button:hover {
+    background: white;
+    color: #080c18;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 760px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, #080c18 0%, rgba(8,12,24,.95) 32%, rgba(8,12,24,.35) 75%, rgba(8,12,24,.15) 100%),
+        linear-gradient(0deg, #080c18 0%, transparent 40%),
+        url('https://resizing.flixster.com/UXVL_9q6taCUdkwweK7tn3PYOB0%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk0MDhlMTk4LWE3OWYtNGYwNy05N2I2LTU3NTYxODI1MmQzOC5qcGc%3D') center 30% / cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(12,112,255,.13);
+    filter: blur(100px);
+    right: -200px;
+    top: 100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 110px;
+    max-width: 650px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--gold);
+}
+
+.eyebrow::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: var(--red);
+}
+
+.hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(85px, 13vw, 155px);
+    font-weight: 900;
+    line-height: .76;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    text-shadow: 0 8px 40px rgba(0,0,0,.4);
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--red);
+    -webkit-text-stroke: 1px rgba(255,255,255,.1);
+}
+
+.tagline {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #c2cada;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--red);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #ff4055;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(237,38,61,.3);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.4);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--bg);
+}
+
+.play-icon {
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+/* MOVIE DETAILS */
+
+.details-strip {
+    background: #0d1423;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.detail {
+    padding: 28px 20px;
+    border-right: 1px solid var(--line);
+}
+
+.detail:first-child {
+    padding-left: 0;
+}
+
+.detail:last-child {
+    border: none;
+}
+
+.detail-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #7e8ba3;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.detail-value {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* SECTION GENERAL */
+
+section {
+    padding: 105px 0;
+}
+
+.section-kicker {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(42px, 6vw, 65px);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+/* STORY */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.story-image {
+    position: relative;
+    min-height: 480px;
+    background:
+        linear-gradient(0deg, rgba(8,12,24,.2), transparent),
+        url('https://resizing.flixster.com/UXVL_9q6taCUdkwweK7tn3PYOB0%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk0MDhlMTk4LWE3OWYtNGYwNy05N2I2LTU3NTYxODI1MmQzOC5qcGc%3D') center / cover no-repeat;
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.story-image::after {
+    content: "KARA ZOR-EL";
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 12px #000;
+}
+
+.story-text {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+}
+
+.story-note {
+    margin-top: 28px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--red);
+    background: rgba(255,255,255,.04);
+    color: white;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* CAST */
+
+.cast-section {
+    background: #0d1423;
+}
+
+.cast-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 42px;
+}
+
+.cast-heading .section-title {
+    margin-bottom: 0;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.cast-card {
+    background: #141e30;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 25px 20px;
+    transition: .3s;
+}
+
+.cast-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(237,38,61,.6);
+    background: #19263c;
+}
+
+.cast-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(255,255,255,.12);
+    margin-bottom: 25px;
+}
+
+.cast-card h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.cast-card p {
+    color: #8d9bb0;
+    font-size: 11px;
+}
+
+/* TRAILER */
+
+.trailer-section {
+    text-align: center;
+}
+
+.trailer-box {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(5,10,22,.25), rgba(5,10,22,.7)),
+        url('https://resizing.flixster.com/UXVL_9q6taCUdkwweK7tn3PYOB0%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk0MDhlMTk4LWE3OWYtNGYwNy05N2I2LTU3NTYxODI1MmQzOC5qcGc%3D') center 30% / cover;
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.trailer-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--red);
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 0 0 12px rgba(237,38,61,.2);
+    transition: .3s;
+}
+
+.trailer-play:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+    box-shadow: 0 0 0 20px rgba(237,38,61,.15);
+}
+
+.trailer-caption {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+/* FINAL BANNER */
+
+.final-banner {
+    padding: 80px 0;
+    background:
+        linear-gradient(90deg, rgba(8,12,24,.98), rgba(8,12,24,.7)),
+        url('https://resizing.flixster.com/UXVL_9q6taCUdkwweK7tn3PYOB0%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk0MDhlMTk4LWE3OWYtNGYwNy05N2I2LTU3NTYxODI1MmQzOC5qcGc%3D') center 35% / cover;
+    border-top: 1px solid var(--line);
+}
+
+.final-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.final-content h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: .95;
+    text-transform: uppercase;
+}
+
+.final-content h2 span {
+    color: var(--red);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+    background: #060a13;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: var(--red);
+}
+
+.footer-copy {
+    color: #68758a;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.footer-link {
+    font-size: 10px;
+    color: #9eabc0;
+}
+
+/* ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .hero {
+        min-height: 700px;
+        background-position: 60% center;
     }
-    header {
-      background: linear-gradient(90deg, #4CAF50, #81C784);
-      color: white;
-      padding: 20px;
-      text-align: center;
+
+    .story-grid {
+        gap: 35px;
     }
+
+    .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 88%;
+    }
+
+    .navbar {
+        padding: 19px 0;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        letter-spacing: .5px;
+    }
+
+    .nav-links a:nth-child(2),
+    .nav-links a:nth-child(3) {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 9px 11px;
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 700px;
+        align-items: end;
+        padding-bottom: 85px;
+        background-position: 58% center;
+        background-image:
+            linear-gradient(0deg, #080c18 0%, rgba(8,12,24,.9) 38%, rgba(8,12,24,.15) 100%),
+            url('https://resizing.flixster.com/UXVL_9q6taCUdkwweK7tn3PYOB0%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk0MDhlMTk4LWE3OWYtNGYwNy05N2I2LTU3NTYxODI1MmQzOC5qcGc%3D');
+    }
+
+    .hero-content {
+        padding-top: 150px;
+    }
+
+    .hero h1 {
+        font-size: 100px;
+        letter-spacing: -2px;
+    }
+
+    .tagline {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 14px 16px;
+        font-size: 10px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        padding: 20px 10px;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .detail:first-child {
+        padding-left: 10px;
+    }
+
+    .detail:nth-child(2) {
+        border-right: none;
+    }
+
+    .detail:nth-child(3) {
+        border-bottom: none;
+    }
+
+    .detail:last-child {
+        border-bottom: none;
+    }
+
     section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+        padding: 75px 0;
     }
-    h2 {
-      color: #2e7d32;
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
-    .card {
-      background: white;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    .story-image {
+        min-height: 420px;
     }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2e7d32;
-      color: white;
-      margin-top: 20px;
+
+    .cast-grid {
+        gap: 10px;
     }
-    ul {
-      padding-left: 20px;
+
+    .cast-card {
+        padding: 18px 14px;
     }
-  </style>
+
+    .cast-card h3 {
+        font-size: 13px;
+    }
+
+    .cast-heading {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .final-content {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .footer-inner {
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>The Importance of Fruits and Vegetables</h1>
-  <p>Eat healthy, live better</p>
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+    <div class="container nav-inner">
+        <a href="#" class="logo">DC<span> STUDIOS</span></a>
+
+        <div class="nav-links">
+            <a href="#story">THE STORY</a>
+            <a href="#cast">CAST</a>
+            <a href="#trailer">TRAILER</a>
+            <a href="https://www.supergirlmovie.com/" target="_blank" rel="noopener" class="nav-button">OFFICIAL SITE ↗</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="eyebrow">DC STUDIOS PRESENTS</div>
+
+            <h1>
+                SUPER<span>GIRL</span>
+            </h1>
+
+            <div class="tagline">Truth. Justice. Whatever.</div>
+
+            <p class="hero-description">
+                The universe is bigger than she imagined.
+                And her next journey will take her further than ever before.
+                Meet Kara Zor-El in an extraordinary interstellar adventure
+                of vengeance and justice.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#trailer" class="btn btn-primary">
+                    <span class="play-icon">▶</span>
+                    WATCH TRAILER
+                </a>
+
+                <a href="#story" class="btn btn-outline">
+                    EXPLORE THE FILM →
+                </a>
+            </div>
+
+        </div>
+    </div>
 </header>
 
-<section>
-  <div class="card">
-    <h2>Why Fruits and Vegetables Matter</h2>
-    <p>
-      Fruits and vegetables are essential parts of a healthy diet. They provide vitamins,
-      minerals, fiber, and antioxidants that help the body function properly and prevent diseases.
-    </p>
-  </div>
+<!-- MOVIE DETAILS -->
 
-  <div class="card">
-    <h2>Health Benefits</h2>
-    <ul>
-      <li>Boost the immune system</li>
-      <li>Reduce the risk of heart disease and cancer</li>
-      <li>Improve digestion and gut health</li>
-      <li>Help maintain a healthy weight</li>
-      <li>Support healthy skin and vision</li>
-    </ul>
-  </div>
+<div class="details-strip">
+    <div class="container details-grid">
 
-  <div class="card">
-    <h2>Daily Recommendations</h2>
-    <p>
-      Health experts recommend eating at least 5 servings of fruits and vegetables each day.
-      Try to include a variety of colors to get different nutrients.
-    </p>
-  </div>
+        <div class="detail">
+            <span class="detail-label">RELEASE DATE</span>
+            <div class="detail-value">JUNE 2026</div>
+        </div>
 
-  <div class="card">
-    <h2>Tips to Eat More</h2>
-    <ul>
-      <li>Add fruits to your breakfast (e.g., bananas, berries)</li>
-      <li>Include vegetables in every meal</li>
-      <li>Snack on fresh fruits instead of processed foods</li>
-      <li>Blend smoothies with mixed fruits and greens</li>
-    </ul>
-  </div>
+        <div class="detail">
+            <span class="detail-label">DIRECTOR</span>
+            <div class="detail-value">CRAIG GILLESPIE</div>
+        </div>
+
+        <div class="detail">
+            <span class="detail-label">RUNTIME</span>
+            <div class="detail-value">1H 48MIN</div>
+        </div>
+
+        <div class="detail">
+            <span class="detail-label">GENRE</span>
+            <div class="detail-value">ACTION / SCI-FI</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- STORY -->
+
+<section id="story">
+    <div class="container story-grid">
+
+        <div class="story-image reveal"></div>
+
+        <div class="reveal">
+            <div class="section-kicker">THE WOMAN OF TOMORROW</div>
+
+            <h2 class="section-title">
+                A DIFFERENT<br>
+                KIND OF HERO.
+            </h2>
+
+            <div class="story-text">
+                <p>
+                    Born on Krypton, Kara Zor-El has a very different
+                    relationship with Earth and the universe from her
+                    cousin Superman.
+                </p>
+
+                <p>
+                    When an unexpected and ruthless adversary strikes
+                    too close to home, Kara reluctantly joins forces
+                    with an unlikely companion on an epic interstellar
+                    journey of vengeance and justice.
+                </p>
+
+                <p>
+                    This is not simply another superhero adventure.
+                    It is a journey across the stars, where loyalty,
+                    loss and justice collide.
+                </p>
+            </div>
+
+            <div class="story-note">
+                "She's not here to be anyone's sidekick."
+                <br>
+                <strong>— SUPERGIRL</strong>
+            </div>
+        </div>
+
+    </div>
 </section>
 
+<!-- CAST -->
+
+<section class="cast-section" id="cast">
+    <div class="container">
+
+        <div class="cast-heading reveal">
+            <div>
+                <div class="section-kicker">MEET THE CHARACTERS</div>
+                <h2 class="section-title">THE CAST</h2>
+            </div>
+            <p style="color:#8d9bb0;font-size:12px;">
+                The faces behind the interstellar adventure.
+            </p>
+        </div>
+
+        <div class="cast-grid">
+
+            <div class="cast-card reveal">
+                <div class="cast-number">01</div>
+                <h3>Milly Alcock</h3>
+                <p>Kara Zor-El / Supergirl</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">02</div>
+                <h3>Jason Momoa</h3>
+                <p>Lobo</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">03</div>
+                <h3>Eve Ridley</h3>
+                <p>Ruthye Marye Knoll</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">04</div>
+                <h3>Matthias Schoenaerts</h3>
+                <p>Krem of the Yellow Hills</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">05</div>
+                <h3>David Krumholtz</h3>
+                <p>Zor-El</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">06</div>
+                <h3>Emily Beecham</h3>
+                <p>Alura In-Ze</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">07</div>
+                <h3>David Corenswet</h3>
+                <p>Superman</p>
+            </div>
+
+            <div class="cast-card reveal">
+                <div class="cast-number">08</div>
+                <h3>Craig Gillespie</h3>
+                <p>Director</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TRAILER -->
+
+<section class="trailer-section" id="trailer">
+    <div class="container">
+
+        <div class="section-kicker">GET A FIRST LOOK</div>
+
+        <h2 class="section-title">THE OFFICIAL TRAILER</h2>
+
+        <p style="color:#8d9bb0;font-size:13px;">
+            Enter the world of Supergirl.
+        </p>
+
+        <a class="trailer-box reveal"
+           href="https://www.supergirlmovie.com/"
+           target="_blank"
+           rel="noopener"
+           aria-label="Watch the official Supergirl trailer">
+
+            <div class="trailer-play">▶</div>
+
+            <div class="trailer-caption">
+                WATCH THE OFFICIAL TRAILER ↗
+            </div>
+
+        </a>
+
+    </div>
+</section>
+
+<!-- FINAL BANNER -->
+
+<section class="final-banner">
+    <div class="container final-content">
+
+        <h2>
+            THE FUTURE<br>
+            HAS A <span>HERO.</span>
+        </h2>
+
+        <a href="https://www.supergirlmovie.com/"
+           target="_blank"
+           rel="noopener"
+           class="btn btn-primary">
+            DISCOVER SUPERGIRL ↗
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+
 <footer>
-  <p>© 2026 Healthy Living Initiative</p>
+    <div class="container footer-inner">
+
+        <div class="footer-logo">
+            DC <span>STUDIOS</span>
+        </div>
+
+        <div class="footer-copy">
+            SUPERGIRL (2026)<br>
+            A DC STUDIOS FEATURE FILM
+        </div>
+
+        <a class="footer-link"
+           href="https://www.dc.com/movies/supergirl-2026"
+           target="_blank"
+           rel="noopener">
+            MOVIE INFORMATION ↗
+        </a>
+
+    </div>
 </footer>
+
+<script>
+/* SCROLL REVEAL ANIMATIONS */
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+});
+</script>
 
 </body>
 </html>
